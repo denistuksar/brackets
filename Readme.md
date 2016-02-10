@@ -48,11 +48,11 @@ brackets({groups: [{name: 'friends'}]}, 'groups[][name]', 'work') // -> {groups:
 var reduce = require('@f/reduce')
 var brackets = require('@f/brackets')
 var controls = require('@f/form-controls')
-var serializable = require('@f/is-serializable')
+var submittable = require('@f/is-element-submittable')
 
 function serialize (form) {
   return reduce(function (acc, ctrl) {
-    return serializable(ctrl)
+    return submittable(ctrl)
       ? brackets(acc, ctrl.name, ctrl.value)
       : acc
   }, {}, controls(form))
