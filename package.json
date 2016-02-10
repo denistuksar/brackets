@@ -1,0 +1,19 @@
+{
+  "name": "@f/brackets",
+  "description": "Bracket notation for form input names",
+  "repository": "git://github.com/micro-js/brackets.git",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "postversion": "git push && git push --tags && npm publish --access=public"
+  },
+  "dependencies": {
+    "@f/has": "^1.0.0",
+    "@f/is-array": "^1.1.1",
+    "@f/reduce-array": "^0.2.1"
+  },
+  "devDependencies": {
+    "tape": "^4.2.2"
+  }
+}
